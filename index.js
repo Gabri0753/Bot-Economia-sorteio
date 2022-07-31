@@ -1,9 +1,5 @@
 // Packages and Variables
 const Discord = require("discord.js");
-const moment = require("moment")
-require("moment-duration-format")
-const { QuickDB } = require("quick.db");
-const db = new QuickDB();
 const { InteractionType } = require("discord-api-types/v10")
 
 
