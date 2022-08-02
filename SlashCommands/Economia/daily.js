@@ -26,18 +26,14 @@ module.exports =  {
         }
 
         let author = await db.get(`daily_${interaction.user.id}`)
-        
-        let xp = await db.get(`xp_${interaction.user.id}`);
 
-        let baú = await db.get(`baú_${interaction.user.id}`)
-
-        let reais = await db.get(`reais_${interaction.user.id}`)
+        let money = await db.get(`money_${interaction.user.id}`)
 
         if (author !== null && timeout - (Date.now() - author) > 0) {
               
             let time = ms(timeout - (Date.now() - author));
 
-      interaction.reply({content: `não foi possível pegar seu prêmio diário espere ${time.days} ${time.hours}`, ephemeral: true})
+      interaction.reply({content: `não foi possível pegar seu prêmio diário espere ${time.days} Dias e ${time.hours} Horas`, ephemeral: true})
 
         } else {
 
